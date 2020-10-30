@@ -84,9 +84,9 @@ def save_dice_coefs(paths, dice_coefs):
 
 def create_and_train_model():
     x_train, y_train, paths = load_train_data()
-    # unet_model = create_unet_model(IMG_HEIGHT, IMG_WIDTH, CHANNELS)
-    # unet_model = train(unet_model, x_train_data=x_train, y_train_data=y_train)
-    # save_unet_model(unet_model)
+    unet_model = create_unet_model(IMG_HEIGHT, IMG_WIDTH, CHANNELS)
+    unet_model = train(unet_model, x_train_data=x_train, y_train_data=y_train)
+    save_unet_model(unet_model)
     unet_model = load_unet_model()
     predicted_masks = make_prediction(unet_model, x_train)
     save_dice_coefs(paths, calculate_images_dice_coef(y_train, predicted_masks))
