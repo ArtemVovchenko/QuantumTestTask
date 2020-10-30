@@ -18,3 +18,4 @@ Each image coverts to 128x128 fromat, which speeds up learning process. Predicte
 1. **training_dice_scores.csv** contains all dice scores, calculated on training masks
 2. **out/** contains all images and their predicted masks
 3. **model.py** contains the defenition of the developed U-Net model as well as metric functions and load/save functions
+4. **unet_model.h5** tained model
